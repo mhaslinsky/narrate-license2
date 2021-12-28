@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narrate Licensure</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <div id="topplogodiv">
+    <a href="https://toppcopy.com">
+      <img
+        id="topp-logo"
+        width="220"
+        src="https://www.toppcopy.com/wp-content/uploads/2020/05/tc-logo.png"
+    /></a>
+  </div>
+  <body>
+    <h1>Narrate Licensing</h1>
+    <div class = "instructions"><p class="instruction-text">
+      On the left you want to choose the csv exported from the <b>Detailed Active Accounts Report</b>
+      under the Reports menu option in the Admin Console (Please first remove the first 4 rows of meta data at the top and
+      choose a start date well in the past). On the
+      right you will need to upload the csv exported from the <b>Accounts</b> menu option (make sure to select the entire division for
+      the client before exporting at the bottom). Once both are selected, click the <b>Generate List Button</b> in the middle.
+    </p></div>
+    <div class="container">
+      <div class="form-element">
+        <form id="file-location">
+          <h3>Select a valid Active Account Report .CSV file</h3>
+          <input type="file" id="activeAccount" accept=".csv" />
+        </form>
+      </div>
+      <div class="mid-container">
+        <button id="enter" class="button1" type="button">Generate List</button>
+        <p class="lic-display" id="licDisplayNum">0</p>
+      </div>
+      <div class="form-element">
+        <form id="file-location">
+          <h3>Select a valid Account Export .CSV file</h3>
+          <input type="file" id="allAccounts" accept=".csv" />
+        </form>
+      </div>
+    </div>
+    <script src="sorttable.js" type="text/javascript"></script>
+    <table class="sortable" id="user-table">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Last Active</th>
+          <th>Group</th>
+        </tr>
+        <tbody>
+        </tbody>
+      </thead>
+    </table>
+    <script src="papaparse.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
